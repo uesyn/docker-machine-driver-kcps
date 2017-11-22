@@ -1,0 +1,10 @@
+workspace:
+  base: /go
+  path: src/github.com/uesyn/docker-machine-driver-kcps
+pipeline:
+  build:
+    image: golang:1.9
+    commands:
+     - apt update
+     - apt install make
+     - make
