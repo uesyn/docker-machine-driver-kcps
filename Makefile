@@ -3,7 +3,7 @@
 #
 
 all:
-	go build -o docker-machine-driver-kcps ./bin
+	go build  -a -tags netgo -installsuffix netgo --ldflags '-extldflags "-static"' -o docker-machine-driver-kcps ./bin
 
 clean:
 	rm docker-machine-driver-kcps
